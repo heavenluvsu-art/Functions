@@ -1,0 +1,181 @@
+<?php
+$case = "THE 1975";
+$name = "We get married in our heads";
+$replace = "    One of the most beautiful songs ever written    ";
+$other = "AboutYou";
+$email = "yrenriquez@hau.edu.ph";
+$user = "Love,That,One,Song";
+$password = "DoyouthinkIhaveforgotten?";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Built-in Functions</title>
+    <style>
+        body {
+            font-family: Helvetica Nueu, Avenir Next; 
+            background: linear-gradient(0deg,rgba(33, 31, 33, 1) 0%, rgba(77, 77, 77, 1) 51%, rgba(184, 180, 181, 1) 100%);
+            padding: 40px;
+        }
+        h1, h2 {
+            text-align: center;
+            color:rgb(51, 25, 23);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        th {
+            background:rgb(41, 39, 39);
+            color:rgb(247, 247, 247);
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #f1d3ce;
+        }
+        .category {
+            background: #ffe1dc;
+            font-weight: bold;
+            text-align: center;
+        }
+        footer {
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<h1>PHP Built-in String Functions</h1>
+
+<table>
+    <tr class="category"><th colspan="3">Changing the Case of Characters</th></tr>
+    <tr>
+        <th>Function</th>
+        <th>Code</th>
+        <th>Output</th>
+    </tr>
+    <tr>
+        <td>Lowercase</td>
+        <td>strtolower()</td>
+        <td><?= strtolower($case); ?></td>
+    </tr>
+    <tr>
+        <td>Uppercase</td>
+        <td>strtoupper()</td>
+        <td><?= strtoupper($case); ?></td>
+    </tr>
+    <tr>
+        <td>Capitalize</td>
+        <td>ucwords()</td>
+        <td><?= ucwords(strtolower($case)); ?></td>
+    </tr>
+</table>
+
+<table>
+    <tr class="category"><th colspan="3">Counting Characters and Words</th></tr>
+    <tr>
+        <th>Function</th>
+        <th>Code</th>
+        <th>Output</th>
+    </tr>
+    <tr>
+        <td>Number of Characters</td>
+        <td>strlen()</td>
+        <td><?= strlen($name); ?></td>
+    </tr>
+    <tr>
+        <td>Number of Words</td>
+        <td>str_word_count()</td>
+        <td><?= str_word_count($name); ?></td>
+    </tr>
+</table>
+
+<table>
+    <tr class="category"><th colspan="3">Removing and Replacing Characters</th></tr>
+    <tr>
+        <th>Function</th>
+        <th>Code</th>
+        <th>Output</th>
+    </tr>
+    <tr>
+        <td>Remove whitespaces from left</td>
+        <td>ltrim()</td>
+    <td><?= ltrim($replace); ?></td>
+    </tr>
+    <tr>
+        <td>Remove whitespaces from right</td>
+        <td>rtrim()</td>
+        <td><?= rtrim($replace); ?></td>
+    </tr>
+    <tr>
+        <td>Remove both sides</td>
+        <td>trim()</td>
+        <td><?= trim($replace); ?></td>
+    </tr>
+    <tr>
+        <td>String replace</td>
+        <td>str_replace()</td>
+        <td><?= str_replace("beautiful", "iconic", $replace); ?></td>
+    </tr>
+    <tr>
+        <td>String ireplace</td>
+        <td>str_ireplace()</td>
+        <td><?= str_ireplace("SONGS", "lyrics", $replace); ?></td>
+    </tr>
+    <tr>
+        <td>String Repeat</td>
+        <td>str_repeat()</td>
+        <td><?= str_repeat("Do you think I have Forgotten ", 3); ?></td>
+    </tr>
+</table>
+
+
+<table>
+    <tr class="category"><th colspan="3">Other Useful Built-in Functions</th></tr>
+    <tr>
+        <th>Function</th>
+        <th>Description</th>
+        <th>Output</th>
+    </tr>
+    <tr>
+        <td>substr()</td>
+        <td>Extract part of a string</td>
+        <td><?= substr($other, 0, 12); ?></td>
+    </tr>
+    <tr>
+        <td>strpos()</td>
+        <td>Find position of word</td>
+        <td><?= strpos($other, "u"); ?></td>
+    </tr>
+    <tr>
+        <td>strrev()</td>
+        <td>Reverse a string</td>
+        <td><?= strrev($other); ?></td>
+    </tr>
+    <tr>
+        <td>explode()</td>
+        <td>Split string into array</td>
+        <td><?= implode(" | ", explode(",", $user)); ?></td>
+    </tr>
+    <tr>
+        <td>implode()</td>
+        <td>Join array into string</td>
+        <td><?= implode(" - ", explode(",", $user)); ?></td>
+    </tr>
+</table>
+
+<footer>
+    |Made By: Yuries Heaven R. Enriquez| CYB-201| 01/15/26|
+</footer>
+
+</body>
+</html>
